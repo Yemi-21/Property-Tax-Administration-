@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="CSS/hstyle.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.tab').click(function() {
+                $('.tab').removeClass('active');
+                $(this).addClass('active');
+                var tabId = $(this).attr('data-tab');
+                $('.tab-content').removeClass('active');
+                $('#' + tabId).addClass('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to the Property Tax Administration</h2>
+        <div class="tabs">
+            <div class="tab active" data-tab="assessment">Assessment</div>
+            <div class="tab" data-tab="receipt">Receipt</div>
+            <div class="tab" data-tab="tax-bill">Tax Bill</div>
+            <div class="tab" data-tab="owner">Owner</div>
+            <div class="tab" data-tab="property">Property</div>
+        </div>
+        <div class="tab-content active" id="assessment">
+            <!-- Assessment content -->
+            <h3>Assessment</h3>
+            <p>This is the assessment tab content.</p>
+        </div>
+        <div class="tab-content" id="receipt">
+            <!-- Receipt content -->
+            <h3>Receipt</h3>
+            <p>This is the receipt tab content.</p>
+        </div>
+        <div class="tab-content" id="tax-bill">
+            <!-- Tax bill content -->
+            <h3>Tax Bill</h3>
+            <p>This is the tax bill tab content.</p>
+        </div>
+        <div class="tab-content" id="owner">
+            <!-- Owner content -->
+            <h3>Owner</h3>
+            <p>This is the owner tab content.</p>
+        </div>
+        <div class="tab-content" id="property">
+            <!-- Property content -->
+            <h3>Property</h3>
+            <p>This is the property tab content.</p>
+        </div>
+    </div>
+</body>
+</html>
